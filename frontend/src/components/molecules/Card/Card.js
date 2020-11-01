@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import React, { Component } from "react";
+import Button from "../../atoms/Button/Button";
 
 const StyledWrapper = styled.div`
   height: 25vh;
@@ -8,6 +9,15 @@ const StyledWrapper = styled.div`
   overflow: hidden;
   background-color: blue;
   margin: 4% auto;
+  position: relative;
+`;
+
+const StyledButton = styled(Button)`
+  border-radius: 5px;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -5%);
 `;
 
 class Card extends Component {
@@ -18,7 +28,7 @@ class Card extends Component {
   render() {
     return (
       <StyledWrapper>
-        <h1>Siema</h1>
+        <StyledButton>{this.props.items}</StyledButton>
       </StyledWrapper>
     );
   }

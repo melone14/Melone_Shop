@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import Heading from "../components/atoms/Button/Heading/Heading";
+import Heading from "../components/atoms/Heading/Heading";
 import Card from "../components/molecules/Card/Card";
 import Navigation from "../components/organisms/Navigation/Navigation";
 import Slider from "../components/organisms/Slider/Slider";
@@ -12,10 +12,10 @@ const Root = () => (
     <GlobalStyle />
     <Navigation />
     <Slider />
-    <Card />
-    <Card />
+    <Card items="Shoes" />
+    <Card items="T-shirts" />
+    <Card items="Hoodies" />
     <Heading />
-    <Card />
   </BrowserRouter>
 );
 
