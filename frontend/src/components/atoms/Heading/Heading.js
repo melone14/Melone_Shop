@@ -5,9 +5,14 @@ const StyledWrapper = styled.div`
   text-align: center;
 `;
 
+const StyledTitle = styled.h1`
+  font-size: 3rem;
+  font-weight: 500;
+`;
+
 const Heading = () => (
   <StyledWrapper>
-    <h1>Best sellers</h1>
+    <StyledTitle>Best sellers</StyledTitle>
     <p>Top sale in this week</p>
   </StyledWrapper>
 );

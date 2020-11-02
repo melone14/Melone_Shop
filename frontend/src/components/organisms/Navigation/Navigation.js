@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Button from "../../atoms/Button/Button";
-import logo from "../../../assets/logo.png";
+import logo from "../../../assets/icons/logo.png";
 
 const NavigationWrapper = styled.nav`
   position: fixed;
