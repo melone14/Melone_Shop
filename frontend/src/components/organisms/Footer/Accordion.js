@@ -1,28 +1,10 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import styled, { css } from "styled-components";
-import PropTypes from "prop-types";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import styled, { css } from 'styled-components';
+import PropTypes from 'prop-types';
 
-import plus from "../../../assets/icons/plus.svg";
-import minus from "../../../assets/icons/minus.svg";
-
-const Wrapper = styled.div`
-  cursor: pointer;
-  ${({ isActive }) =>
-    isActive &&
-    css`
-      & > ${List} {
-        max-height: 400px;
-        opacity: 1;
-      }
-      & > ${MainText}:after {
-        content: url(${minus});
-      }
-    `};
-  @media (max-width: 42.5rem) {
-    cursor: auto;
-  }
-`;
+import plus from '../../../assets/icons/plus.svg';
+import minus from '../../../assets/icons/minus.svg';
 
 const MainText = styled.div`
   position: relative;
@@ -67,6 +49,24 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const Wrapper = styled.div`
+  cursor: pointer;
+  ${({ isActive }) =>
+    isActive &&
+    css`
+      & > ${List} {
+        max-height: 400px;
+        opacity: 1;
+      }
+      & > ${MainText}:after {
+        content: url(${minus});
+      }
+    `};
+  @media (max-width: 42.5rem) {
+    cursor: auto;
+  }
+`;
+
 const Accordion = ({ heading, links }) => {
   const [isActive, setActive] = useState(false);
 
@@ -90,6 +90,7 @@ const Accordion = ({ heading, links }) => {
 
 Accordion.propTypes = {
   heading: PropTypes.string.isRequired,
+  links: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
 };
 
 export default Accordion;

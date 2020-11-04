@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 // import { Link } from "react-router-dom";
 // import facebook from "../../../assets/icons/facebook.svg";
 // import twitter from "../../../assets/icons/twitter.svg";
 // import instagram from "../../../assets/icons/instagram.svg";
 // import youtube from "../../../assets/icons/youtube.svg";
-import Accordion from "./Accordion";
-import { theCompany, findUsOn } from "./links";
+import Accordion from './Accordion';
+import { theCompany, findUsOn } from './links';
 
 const StyledWrapper = styled.footer`
   background: #1b1b1b;
@@ -127,8 +127,8 @@ const Footer = () => (
   <StyledWrapper>
     <InnerWrapper>
       <Content>
-        <Accordion heading="The Company" links={theCompany}></Accordion>
-        <Accordion heading="About us" links={findUsOn}></Accordion>
+        <Accordion heading="The Company" links={theCompany} />
+        <Accordion heading="About us" links={findUsOn} />
       </Content>
       <StyledRights>©2020-2022 Melone S.A. - All rights reserved.</StyledRights>
     </InnerWrapper>
