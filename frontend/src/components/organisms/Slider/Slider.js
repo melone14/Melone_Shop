@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import background from "../../../assets/images/background.jpg";
-import Button from "../../atoms/Button/Button";
+import React from 'react';
+import styled from 'styled-components';
+import background from '../../../assets/images/background.jpg';
+import Button from '../../atoms/Button/Button';
 
 const StyledWrapper = styled.section`
   width: 100vw;
@@ -34,6 +34,7 @@ const StyledSliderButton = styled(Button)`
   background: #dedfe0;
   border-radius: 4px;
   color: #1b1b1b;
+  opacity: 0.9;
 `;
 
 const Slider = () => (
