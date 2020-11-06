@@ -17,7 +17,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     overflow-x: hidden;
     font-size: 1.6rem;
-    font-family: 'Balsamiq Sans';
+    /* font-family: 'Balsamiq Sans'; */
+    font-family: 'Montserrat', sans-serif;
     background-color: #dedfe0;
   }
 

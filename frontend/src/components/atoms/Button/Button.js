@@ -9,8 +9,7 @@ const Button = styled.button`
   height: 47px;
   border: none;
   border-radius: 50px;
-  font-family: 'Balsamiq Sans';
-  /* font-weight: ${({ theme }) => theme.light}; */
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   transition: 0.3s ease-in-out;
   cursor: pointer;

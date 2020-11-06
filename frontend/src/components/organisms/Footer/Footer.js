@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Accordion from './Accordion';
 import { theCompany, findUsOn } from './links';
-import logo from '../../../assets/icons/logo.png';
+// import logo from '../../../assets/icons/logo.png';
 
 const Wrapper = styled.footer`
   background: #1b1b1b;
@@ -22,30 +22,32 @@ const Content = styled.div`
 `;
 
 const StyledRights = styled.p`
-  color: #1b1b1b;
+  color: #dedfe0;
   display: block;
   margin: 0 auto;
   font-size: 1.3rem;
   text-align: center;
   padding-bottom: 1.5rem;
+  font-weight: 300;
 `;
 
-const LogoWrapper = styled.div`
-  background-color: #dedfe0;
-  height: 20vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
+// const LogoWrapper = styled.div`
+//   background-color: #dedfe0;
+//   height: 20vh;
+//   width: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// `;
 
-const StyledLogo = styled(Link)`
-  display: block;
-  width: 45%;
-  height: 100%;
-  background: url(${logo}) center/cover no-repeat border-box;
-  background-size: 100%;
-`;
+// const StyledLogo = styled(Link)`
+//   display: block;
+//   width: 45%;
+//   height: 100%;
+//   background: url(${logo}) center/cover no-repeat border-box;
+//   background-size: 100%;
+//   filter: contrast(160%);
+// `;
 
 const Footer = () => (
   <Wrapper>
@@ -54,11 +56,12 @@ const Footer = () => (
         <Accordion heading="The Company" links={theCompany} />
         <Accordion heading="About us" links={findUsOn} />
       </Content>
+      <StyledRights>©2020-2022 Melone S.A. - All rights reserved</StyledRights>
     </InnerWrapper>
-    <LogoWrapper>
+    {/* <LogoWrapper>
       <StyledLogo to="/" />
       <StyledRights>©2020-2022 Melone S.A. - All rights reserved</StyledRights>
-    </LogoWrapper>
+    </LogoWrapper> */}
   </Wrapper>
 );
 

@@ -33,7 +33,7 @@ const StyledButton = styled(Button)`
   position: absolute;
   bottom: 5%;
   left: 50%;
-  transform: translate(-50%, -40%);
+  transform: translate(-57%, -40%);
   z-index: 2;
   box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.1);
   transition: 0.35s;
