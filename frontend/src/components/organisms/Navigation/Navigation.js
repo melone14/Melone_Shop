@@ -1,8 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import Button from "../../atoms/Button/Button";
-import logo from "../../../assets/icons/logo.png";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import Button from '../../atoms/Button/Button';
+import logo from '../../../assets/icons/logo.png';
+import SidebarMenu from './SidebarMenu';
+import Backdrop from './Backdrop';
 
 const NavigationWrapper = styled.nav`
   position: fixed;
@@ -12,7 +14,7 @@ const NavigationWrapper = styled.nav`
   top: 0;
   left: 0;
   width: 100vw;
-  max-width: 1500px;
+  /* max-width: 1500px; */
   height: 10vh;
   z-index: 2;
   padding: 0 5px;
@@ -27,12 +29,26 @@ const StyledLogo = styled(Link)`
   background-size: 100%;
 `;
 
-const Navigation = () => (
-  <NavigationWrapper>
-    <Button hamburger />
-    <StyledLogo to="/" />
-    <Button basket />
-  </NavigationWrapper>
-);
+const Navigation = () => {
+  const [isOpen, setOpen] = useState(false);
+
+  const handleHamburgerClick = () => {
+    setOpen((prevOpen) => !prevOpen);
+  };
+
+  const handleBackdropClick = () => {
+    setOpen(false);
+  };
+
+  return (
+    <NavigationWrapper>
+      <Button hamburger onClick={handleHamburgerClick} />
+      <SidebarMenu open={isOpen} />
+      {isOpen ? <Backdrop click={handleBackdropClick} /> : null}
+      <StyledLogo to="/" />
+      <Button basket />
+    </NavigationWrapper>
+  );
+};
 
 export default Navigation;

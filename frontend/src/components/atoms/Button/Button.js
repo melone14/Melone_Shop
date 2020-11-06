@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components";
-import bars from "../../../assets/icons/bars.svg";
-import cart from "../../../assets/icons/cart.svg";
+import styled, { css } from 'styled-components';
+import bars from '../../../assets/icons/bars.svg';
+import cart from '../../../assets/icons/cart.svg';
 
 const Button = styled.button`
   outline: none;
@@ -9,7 +9,7 @@ const Button = styled.button`
   height: 47px;
   border: none;
   border-radius: 50px;
-  font-family: "Balsamiq Sans";
+  font-family: 'Balsamiq Sans';
   /* font-weight: ${({ theme }) => theme.light}; */
   font-size: 16px;
   transition: 0.3s ease-in-out;

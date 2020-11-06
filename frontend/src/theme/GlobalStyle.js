@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   
@@ -15,9 +15,14 @@ const GlobalStyle = createGlobalStyle`
   }
   
   body {
+    overflow-x: hidden;
     font-size: 1.6rem;
     font-family: 'Balsamiq Sans';
     background-color: #dedfe0;
+  }
+
+  .open {
+    transform: translateX(0);
   }
 `;
 

@@ -1,10 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import Button from "../../atoms/Button/Button";
-import shoes from "../../../assets/images/shoes.jpg";
-import hoodies from "../../../assets/images/hoodies.jpg";
-import tshirts from "../../../assets/images/tshirts.jpg";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import Button from '../../atoms/Button/Button';
+import shoes from '../../../assets/images/shoes.jpg';
+import hoodies from '../../../assets/images/hoodies.jpg';
+import tshirts from '../../../assets/images/tshirts.jpg';
 
 const StyledWrapper = styled.section`
   display: flex;
@@ -49,14 +49,13 @@ const StyledButton = styled(Button)`
 
 const StyledLink = styled(Link)`
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(rgba(53, 129, 200, 0.2), rgba(2, 15, 32, 0.2))
-      no-repeat center;
+    background: linear-gradient(rgba(53, 129, 200, 0.2), rgba(2, 15, 32, 0.2)) no-repeat center;
     z-index: 1;
   }
   &:hover > ${CategoryImage} {
