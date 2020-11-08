@@ -18,7 +18,13 @@ const NavigationWrapper = styled.nav`
   height: 10vh;
   z-index: 2;
   padding: 0 5px;
-  border-bottom: 0.7px solid gray;
+  border-bottom: 0px solid white;
+  box-shadow: 0 -1px #ddd inset;
+  transition: 0.3s ease-in-out;
+
+  &.active {
+    background: white;
+  }
 `;
 
 const StyledLogo = styled(Link)`
@@ -31,6 +37,7 @@ const StyledLogo = styled(Link)`
 
 const Navigation = () => {
   const [isOpen, setOpen] = useState(false);
+  const [navbarScroll, setNavbarScroll] = useState(false);
 
   const handleHamburgerClick = () => {
     setOpen((prevOpen) => !prevOpen);
@@ -40,8 +47,18 @@ const Navigation = () => {
     setOpen(false);
   };
 
+  const handleNavbarScroll = () => {
+    if (window.scrollY >= 120) {
+      setNavbarScroll(true);
+    } else {
+      setNavbarScroll(false);
+    }
+  };
+
+  window.addEventListener('scroll', handleNavbarScroll);
+
   return (
-    <NavigationWrapper>
+    <NavigationWrapper className={navbarScroll ? 'active' : null}>
       <Button hamburger onClick={handleHamburgerClick} />
       <SidebarMenu open={isOpen} />
       {isOpen ? <Backdrop click={handleBackdropClick} /> : null}

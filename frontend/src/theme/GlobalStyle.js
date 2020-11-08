@@ -17,13 +17,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     overflow-x: hidden;
     font-size: 1.6rem;
-    /* font-family: 'Balsamiq Sans'; */
     font-family: 'Montserrat', sans-serif;
-    background-color: #dedfe0;
-  }
-
-  .open {
-    transform: translateX(0);
+    background-color: #f9f9f9;
   }
 `;
 

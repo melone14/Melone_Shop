@@ -17,6 +17,10 @@ const Navigation = styled.nav`
   transform: translateX(-100%);
   transition: transform 0.3s ease-out;
 
+  &.open {
+    transform: translateX(0);
+  }
+
   ul {
     height: 100%;
     list-style: none;
