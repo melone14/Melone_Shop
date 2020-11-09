@@ -1,18 +1,22 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navigation from '../components/organisms/Navigation/Navigation';
 import GlobalStyle from '../theme/GlobalStyle';
 import theme from '../theme/mainTheme';
 import Home from './Home';
+import Items from './Items';
 import Footer from '../components/organisms/Footer/Footer';
 
 const Root = () => (
-  <BrowserRouter theme={theme}>
+  <Router theme={theme}>
     <GlobalStyle />
     <Navigation />
-    <Home />
+    <Switch>
+      <Route path="/" exact component={Home} />
+      <Route path="/items" component={Items} />
+    </Switch>
     <Footer />
-  </BrowserRouter>
+  </Router>
 );
 
 export default Root;

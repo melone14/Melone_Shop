@@ -30,7 +30,13 @@ const Navigation = styled.nav`
   }
 
   li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0.5rem 0;
+    width: 50vw;
+    height: 10vh;
+    background-color: grey;
   }
 
   a {
