@@ -48,7 +48,7 @@ const Navigation = () => {
   };
 
   const handleNavbarScroll = () => {
-    if (window.scrollY >= 120) {
+    if (window.scrollY >= 2) {
       setNavbarScroll(true);
     } else {
       setNavbarScroll(false);
