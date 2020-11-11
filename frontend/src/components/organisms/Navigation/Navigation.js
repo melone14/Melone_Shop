@@ -33,6 +33,16 @@ const StyledLogo = styled(Link)`
   height: 100%;
   background: url(${logo}) center/cover no-repeat border-box;
   background-size: 100%;
+
+  @media (min-width: 768px) {
+    width: 20%;
+  }
+`;
+
+const StyledButton = styled(Button)`
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 const Navigation = () => {
@@ -59,7 +69,7 @@ const Navigation = () => {
 
   return (
     <NavigationWrapper className={navbarScroll ? 'active' : null}>
-      <Button hamburger onClick={handleHamburgerClick} />
+      <StyledButton hamburger onClick={handleHamburgerClick} />
       <SidebarMenu open={isOpen} />
       {isOpen ? <Backdrop click={handleBackdropClick} /> : null}
       <StyledLogo to="/" />

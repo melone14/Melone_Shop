@@ -14,7 +14,7 @@ const Navigation = styled.nav`
   z-index: 200;
   background-color: #dedfe0;
   box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
-  transform: translateX(-100%);
+  transform: translateX(-190%);
   transition: transform 0.3s ease-out;
 
   &.open {
@@ -51,10 +51,10 @@ const SidebarMenu = ({ open }) => {
     <Navigation className={open ? 'open' : ''}>
       <ul>
         <li>
-          <a href="/">Products</a>
+          <a href="/">Home</a>
         </li>
         <li>
-          <a href="/">Hoodies</a>
+          <a href="/items">Items</a>
         </li>
       </ul>
     </Navigation>

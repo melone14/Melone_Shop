@@ -63,6 +63,10 @@ const StyledLogo = styled(Link)`
   background: url(${logo}) center/cover no-repeat border-box;
   background-size: 100%;
   filter: contrast(160%);
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 const Footer = () => (

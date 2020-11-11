@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-// import background from '../../../assets/images/background.jpg';
-import background from '../../../assets/images/women.jpg';
+import background from '../../../assets/images/background.jpg';
 import Button from '../../atoms/Button/Button';
 
 const StyledWrapper = styled.section`
