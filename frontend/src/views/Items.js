@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import koszulka1 from '../assets/images/koszulka1.jpg';
 import koszulka2 from '../assets/images/koszulka2.jpg';
 import koszulka3 from '../assets/images/koszulka3.jpg';
@@ -65,6 +66,18 @@ const FilterBtn = styled.button`
   outline: none;
 `;
 
+const ViewMoreBtn = styled(Link)`
+  position: absolute;
+  left: 20%;
+  bottom: 50px;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: black;
+  background: white;
+`;
+
 const Heart = styled.div`
   position: absolute;
   right: 10px;
@@ -93,6 +106,7 @@ const Items = () => {
       <ItemsWrapper>
         {initialProducts.map((item) => (
           <Item background={item.image}>
+            <ViewMoreBtn to="/items/1">View more</ViewMoreBtn>
             <Heart />
             <Price>$ 100</Price>
           </Item>
