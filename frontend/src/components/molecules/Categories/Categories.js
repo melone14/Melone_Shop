@@ -72,19 +72,19 @@ const Categories = () => {
   return (
     <StyledWrapper>
       <StyledCategory>
-        <StyledLink to="/catalog">
+        <StyledLink to="/items">
           <CategoryImage src={shoes} alt="shoes" />
           <StyledButton>Shoes</StyledButton>
         </StyledLink>
       </StyledCategory>
       <StyledCategory>
-        <StyledLink to="/catalog">
+        <StyledLink to="/items">
           <CategoryImage src={tshirts} alt="t-shirts" />
           <StyledButton>T-Shirts</StyledButton>
         </StyledLink>
       </StyledCategory>
       <StyledCategory>
-        <StyledLink to="/catalog">
+        <StyledLink to="/items">
           <CategoryImage src={hoodies} alt="hoodies" />
           <StyledButton>Hoodies</StyledButton>
         </StyledLink>

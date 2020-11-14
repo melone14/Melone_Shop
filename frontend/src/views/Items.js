@@ -1,14 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import koszulka1 from '../assets/images/koszulka1.jpg';
+import koszulka3 from '../assets/images/koszulka1.jpg';
 import koszulka2 from '../assets/images/koszulka2.jpg';
-import koszulka3 from '../assets/images/koszulka3.jpg';
+import koszulka1 from '../assets/images/koszulka3.jpg';
 import koszulka4 from '../assets/images/koszulka4.jpg';
-import koszulka5 from '../assets/images/koszulka5.jpg';
-import koszulka6 from '../assets/images/koszulka6.jpg';
-import koszulka7 from '../assets/images/koszulka7.jpg';
-import koszulka8 from '../assets/images/koszulka8.jpg';
 import heart from '../assets/icons/heart.svg';
 
 const Wrapper = styled.section`
@@ -19,33 +15,28 @@ const Wrapper = styled.section`
   align-items: center;
 `;
 
-const ItemsWrapper = styled.section`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  /* grid-template-rows: 1fr; */
-  grid-gap: 1px;
-  width: 99vw;
-  margin: 0 auto;
-`;
-
-const Item = styled.div`
+const ItemWrapper = styled.div`
   position: relative;
-  width: 49.5vw;
-  height: 35vh;
-  margin: 0 auto;
-  background: url(${({ background }) => background}) center/cover no-repeat border-box;
+  width: 95vw;
+  height: 70vh;
+  margin: 5px auto;
 `;
 
-const Price = styled.p`
-  position: absolute;
-  display: block;
-  width: 70px;
-  height: 20px;
-  text-align: center;
-  bottom: 2%;
-  left: 30%;
+const Image = styled.img`
+  width: 100%;
+  max-height: 452px;
+`;
+
+const ProductDetails = styled.h1`
+  margin-top: 1rem;
+  font-size: 2.2rem;
   font-weight: 300;
-  color: #4b4b4b;
+  text-align: center;
+  line-height: 1.4;
+  span {
+    font-size: 1.9rem;
+    font-weight: 400;
+  }
 `;
 
 const Heading = styled.h1`
@@ -66,36 +57,28 @@ const FilterBtn = styled.button`
   outline: none;
 `;
 
-const ViewMoreBtn = styled(Link)`
+const HeartWrapper = styled.div`
   position: absolute;
-  left: 20%;
-  bottom: 50px;
-  border: none;
-  outline: none;
-  padding: 5px 10px;
-  text-decoration: none;
-  color: black;
+  right: 15px;
+  top: 15px;
+  height: 34px;
+  width: 34px;
   background: white;
+  border-radius: 50%;
+  padding: 7px;
 `;
 
 const Heart = styled.div`
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  height: 25px;
-  width: 25px;
+  width: 100%;
+  height: 100%;
   background: url(${heart}) center/cover no-repeat border-box;
 `;
 
 const initialProducts = [
-  { image: koszulka1 },
-  { image: koszulka2 },
-  { image: koszulka3 },
-  { image: koszulka4 },
-  { image: koszulka5 },
-  { image: koszulka6 },
-  { image: koszulka7 },
-  { image: koszulka8 },
+  { image: koszulka1, id: 1 },
+  { image: koszulka2, id: 2 },
+  { image: koszulka3, id: 3 },
+  { image: koszulka4, id: 4 },
 ];
 
 const Items = () => {
@@ -103,15 +86,21 @@ const Items = () => {
     <Wrapper>
       <Heading>T-Shirts</Heading>
       <FilterBtn>Filter by</FilterBtn>
-      <ItemsWrapper>
-        {initialProducts.map((item) => (
-          <Item background={item.image}>
-            <ViewMoreBtn to="/items/1">View more</ViewMoreBtn>
+      {initialProducts.map((item) => (
+        <ItemWrapper key={item.id}>
+          <HeartWrapper>
             <Heart />
-            <Price>$ 100</Price>
-          </Item>
-        ))}
-      </ItemsWrapper>
+          </HeartWrapper>
+          <Link to={`/items/${item.id}`}>
+            <Image src={item.image} />
+          </Link>
+          <ProductDetails>
+            T-Shirt Oversize Crystal
+            <br />
+            <span>$ 100</span>
+          </ProductDetails>
+        </ItemWrapper>
+      ))}
     </Wrapper>
   );
 };
